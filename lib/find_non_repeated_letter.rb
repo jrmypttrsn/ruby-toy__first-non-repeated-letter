@@ -9,6 +9,17 @@
 
 
 def find_first_non_repeated_letter(str)
-  #write your method here
-  return true
-end
+  array = str.split("")
+  i=0
+  if array.length==1 then return array[i]
+  end
+  while i<array.length
+    if array[i]==array[i+1] || array[i]==array[i-1]
+    else return array[i]
+    end
+   i= i+1
+  end
+end  
+find_first_non_repeated_letter("aabccd")
+# find_first_non_repeated_letter("ddcdd")
+# find_first_non_repeated_letter("aabbaa")
